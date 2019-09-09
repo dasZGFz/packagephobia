@@ -22,7 +22,8 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "redis": "^2.8.0",
-    "semver": "^6.3.0"
+    "semver": "^6.3.0",
+    "svelte-adapter": "^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^12.6.9",
@@ -33,6 +34,7 @@
     "@types/semver": "^6.0.2",
     "@types/tape": "^4.2.33",
     "prettier": "^1.18.2",
+    "redis-mock": "^0.46.0",
     "tape": "^4.11.0",
     "typescript": "^3.6.2"
   }

@@ -4,11 +4,13 @@ import { renderToNodeStream } from 'react-dom/server';
 
 import IndexPage from '../pages/index';
 import ResultPage from '../pages/result';
+import ScanPage from '../pages/scan';
 import NotFoundPage from '../pages/404';
 import ServerErrorPage from '../pages/500';
 
 const IndexFactory = createFactory(IndexPage);
 const ResultFactory = createFactory(ResultPage);
+const ScanFactory = createFactory(ScanPage);
 const NotFoundFactory = createFactory(NotFoundPage);
 const ServerErrorFactory = createFactory(ServerErrorPage);
 
@@ -145,6 +147,8 @@ async function routePage(pathname: string, query: ParsedUrlQuery, tmpDir: string
                 return IndexFactory();
             case pages.result:
                 return ResultFactory(await getResultProps(query, tmpDir));
+            case pages.scan:
+                return ScanFactory();
             default:
                 return NotFoundFactory();
         }
